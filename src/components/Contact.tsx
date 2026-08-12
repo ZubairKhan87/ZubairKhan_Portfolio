@@ -11,10 +11,10 @@ export default function Contact() {
     >
       <Reveal>
         <p className="label">Contact</p>
-        <h2 className="mt-4 max-w-2xl font-serif text-3xl leading-tight tracking-[-0.015em] text-ink sm:text-4xl">
+        <h2 className="display text-ink mt-4 max-w-2xl text-[2rem] leading-[1.15] sm:text-[2.5rem]">
           Have something to build? Let's talk.
         </h2>
-        <p className="mt-4 max-w-lg text-[0.975rem] leading-relaxed text-muted">
+        <p className="mt-5 max-w-lg text-[1.0625rem] leading-[1.7] text-muted">
           Open to roles and freelance work in AI-powered products and full-stack engineering. The fastest way
           to reach me is email.
         </p>
@@ -23,7 +23,7 @@ export default function Contact() {
       <Reveal delay={80}>
         <a
           href={`mailto:${profile.email}`}
-          className="group mt-10 inline-block font-serif text-xl break-all text-ink transition-colors duration-200 hover:text-accent sm:text-2xl"
+          className="display text-ink group mt-10 inline-block text-[1.375rem] break-all transition-colors duration-200 hover:text-accent sm:text-[1.625rem]"
         >
           {profile.email}
           <span className="block h-px w-full origin-left scale-x-100 bg-line transition-colors duration-200 group-hover:bg-accent" />

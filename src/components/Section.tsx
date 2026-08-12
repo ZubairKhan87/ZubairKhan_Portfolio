@@ -24,11 +24,9 @@ export default function Section({ id, label, title, intro, children, flush = fal
         <header className="mb-12 sm:mb-16">
           <p className="label">{label}</p>
           {title && (
-            <h2 className="mt-4 font-serif text-3xl leading-tight tracking-[-0.015em] text-ink sm:text-4xl">
-              {title}
-            </h2>
+            <h2 className="display text-ink mt-4 text-[2rem] leading-[1.15] sm:text-[2.5rem]">{title}</h2>
           )}
-          {intro && <p className="mt-4 max-w-xl text-[0.975rem] leading-relaxed text-muted">{intro}</p>}
+          {intro && <p className="mt-5 max-w-xl text-[1.0625rem] leading-[1.7] text-muted">{intro}</p>}
         </header>
       </Reveal>
       {children}

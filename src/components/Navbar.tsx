@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { navItems, profile } from '../data/site'
+import { navItems } from '../data/site'
 import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
@@ -43,31 +43,26 @@ export default function Navbar() {
         aria-label="Primary"
         className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-6 sm:px-8 lg:px-10"
       >
-        <a
-          href="#top"
-          className="font-serif text-[1.0625rem] tracking-[-0.01em] text-ink transition-colors duration-200 hover:text-accent"
-        >
-          {profile.shortName}
-        </a>
+        <ul className="hidden items-center gap-1 md:-ml-3 md:flex">
+          {navItems.map(({ label, href }) => (
+            <li key={href}>
+              <a
+                href={href}
+                aria-current={active === href ? 'true' : undefined}
+                className={`rounded-full px-3 py-1.5 text-[0.9375rem] transition-colors duration-200 hover:text-ink ${
+                  active === href ? 'font-medium text-ink' : 'text-muted'
+                }`}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-        <div className="flex items-center gap-1 sm:gap-2">
-          <ul className="hidden items-center gap-1 md:flex">
-            {navItems.map(({ label, href }) => (
-              <li key={href}>
-                <a
-                  href={href}
-                  aria-current={active === href ? 'true' : undefined}
-                  className={`rounded-full px-3 py-1.5 text-[0.875rem] transition-colors duration-200 hover:text-ink ${
-                    active === href ? 'text-ink' : 'text-muted'
-                  }`}
-                >
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ThemeToggle />
-        </div>
+        {/* Placeholder keeps the toggle right-aligned once the links move left. */}
+        <span className="md:hidden" aria-hidden="true" />
+
+        <ThemeToggle />
       </nav>
 
       {/* Mobile: a quiet scrollable strip instead of a hamburger overlay. */}

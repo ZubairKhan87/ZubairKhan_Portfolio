@@ -19,22 +19,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     <Reveal as="article" className="group border-t border-line py-10 first:border-t-0 first:pt-0 sm:py-12">
       <div className="grid gap-6 md:grid-cols-[7.5rem_1fr] md:gap-10">
         <div className="flex items-baseline gap-4 md:flex-col md:gap-2">
-          <span className="label tabular-nums">{String(index + 1).padStart(2, '0')}</span>
-          <span className="label !text-muted">{tagline}</span>
+          <span className="label tabular-nums text-faint">{String(index + 1).padStart(2, '0')}</span>
+          <span className="label">{tagline}</span>
         </div>
 
         <div>
-          <h3 className="font-serif text-2xl leading-snug tracking-[-0.01em] text-ink sm:text-[1.75rem]">
-            {name}
-          </h3>
+          <h3 className="display text-ink text-[1.625rem] leading-snug sm:text-[1.75rem]">{name}</h3>
 
-          <p className="mt-4 max-w-2xl text-[0.975rem] leading-relaxed text-muted">{problem}</p>
+          <p className="mt-4 max-w-2xl text-[1.0625rem] leading-[1.7] text-muted">{problem}</p>
 
           {outcomes && outcomes.length > 0 && (
             <ul className="mt-5 space-y-2">
               {outcomes.map((outcome) => (
-                <li key={outcome} className="flex gap-3 text-[0.9375rem] leading-relaxed text-ink">
-                  <span aria-hidden="true" className="mt-2.5 h-px w-4 shrink-0 bg-accent" />
+                <li key={outcome} className="flex gap-3.5 text-[1rem] leading-[1.65] text-ink">
+                  <span aria-hidden="true" className="mt-3 h-px w-4 shrink-0 bg-accent" />
                   <span>{outcome}</span>
                 </li>
               ))}

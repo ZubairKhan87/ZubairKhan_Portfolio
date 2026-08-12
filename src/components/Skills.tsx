@@ -14,7 +14,7 @@ export default function Skills() {
         {skills.map((group, i) => (
           <Reveal key={group.title} delay={i * 40}>
             <div className="grid gap-3 py-6 md:grid-cols-[13rem_1fr] md:gap-10">
-              <dt className="text-[0.9375rem] font-medium text-ink">{group.title}</dt>
+              <dt className="text-[1.0625rem] font-medium text-ink">{group.title}</dt>
               <dd className="flex flex-wrap gap-x-2 gap-y-2">
                 {group.items.map((item) => (
                   <span

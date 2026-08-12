@@ -4,7 +4,7 @@
  */
 
 export const profile = {
-  name: 'Muhammad Zubair Khan',
+  name: 'Zubair Khan',
   shortName: 'Zubair Khan',
   role: 'Software Engineer',
   location: 'Lahore, Pakistan',
@@ -12,14 +12,14 @@ export const profile = {
   phone: '+92 307 5270814',
   github: 'https://github.com/ZubairKhan87',
   linkedin: 'https://linkedin.com/in/zubair-khan',
-  /** Hero headline — split so the accent word can be styled. */
+  /** Hero headline — split so the accent phrase can be styled. */
   headline: {
     lead: 'Software Engineer building',
-    accent: 'intelligent products',
-    trail: 'with AI.',
+    accent: 'intelligent, AI-powered',
+    trail: 'SaaS applications.',
   },
   summary:
-    'I build AI-powered applications with Python, Django, Flask and the MERN stack — with a strong focus on machine learning and NLP — and turn them into scalable, real-world software.',
+    'I build AI products end to end — chat and voice agents, RAG pipelines over vector search, and agentic workflows on Vapi and Retell AI — and ship them as production SaaS with Django, FastAPI and the MERN stack.',
   availability: 'Software Engineer at Evolve Edge Technologies',
 } as const
 
@@ -118,6 +118,36 @@ export const experience = [
     points: [
       'Build web applications with modern frameworks, improving scalability and reducing load times by up to 30%.',
       'Work on agentic AI solutions including Stammer.ai, integrating AI agents into real-world business workflows and optimizing AI-powered systems to enhance efficiency by 20%.',
+      'Ship features across the stack — Django and Django REST Framework on the backend, React on the frontend — from API design through to the interfaces clients use.',
+      'Keep AI features reliable at scale with background workers, Redis-based messaging and vector-search retrieval over customer knowledge bases.',
+      'Wire third-party services into product flows: payments and subscriptions with Stripe, telephony and messaging with Twilio, and voice with Retell AI.',
+    ],
+    stack: [
+      'Django',
+      'Django REST Framework',
+      'React.js',
+      'Node.js',
+      'PostgreSQL',
+      'Redis',
+      'Pinecone',
+      'Stripe',
+      'Twilio',
+      'Retell AI',
+    ],
+    /** Products shipped in this role — detailed in the work section above. */
+    highlights: [
+      {
+        name: 'Stammer.ai',
+        summary:
+          'White-label AI automation platform — chatbots, voice agents, agency subaccounts and custom-domain deployments.',
+        href: 'https://stammer.ai/',
+      },
+      {
+        name: 'Recruitment Digitization Platform',
+        summary:
+          'End-to-end HR portal with dual-approval workflows, AI resume parsing and semantic candidate matching.',
+        href: 'https://ngtrecruit.ngtsol.com/',
+      },
     ],
   },
 ] as const

@@ -20,7 +20,7 @@ export default function Projects() {
       <Reveal>
         <div className="mt-16 mb-2 border-t border-line pt-10">
           <p className="label">Professional work</p>
-          <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-muted">
+          <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.7] text-muted">
             Products built with a team at Evolve Edge Technologies. The codebases are private, so these link
             to the live platforms.
           </p>

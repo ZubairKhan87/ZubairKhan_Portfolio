@@ -11,10 +11,10 @@
 
   --color-surface: #fbfaf9;
   --color-raised: #ffffff;
-  --color-ink: #1a1917;
-  --color-muted: #6b6862;
-  --color-faint: #97938c;
-  --color-line: #e6e3de;
+  --color-ink: #16150f;
+  --color-muted: #57534b;
+  --color-faint: #78736b;
+  --color-line: #e3dfd8;
   --color-accent: #0f766e;
   --color-accent-soft: #e6f2f0;
 }
@@ -22,10 +22,10 @@
 :root[data-theme='dark'] {
   --color-surface: #0e0e0d;
   --color-raised: #161615;
-  --color-ink: #ededea;
-  --color-muted: #9b978f;
-  --color-faint: #6f6b64;
-  --color-line: #2a2926;
+  --color-ink: #f2f1ec;
+  --color-muted: #adaaa2;
+  --color-faint: #8d8880;
+  --color-line: #2d2c28;
   --color-accent: #5eead4;
   --color-accent-soft: #14302c;
 }
@@ -70,12 +70,21 @@
   }
 }
 
+/* Section eyebrow — small, but sized and spaced to stay legible. */
 @utility label {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-faint);
+  color: var(--color-muted);
+}
+
+/* Display headings — the serif needs a touch more weight than its default. */
+@utility display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.018em;
 }
 
 /* Scroll-reveal — opt-in, one transform, no layout thrash. */
